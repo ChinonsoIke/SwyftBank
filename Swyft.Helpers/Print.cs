@@ -68,7 +68,7 @@ namespace Swyft.Helpers
             BackgroundColor = ConsoleColor.DarkBlue;
             ForegroundColor = ConsoleColor.Black;
             WriteLine(FiggleFonts.Slant.Render("            Swyft Bank >>>           "));
-            ForegroundColor = ConsoleColor.DarkBlue;
+            ForegroundColor = ConsoleColor.White;
             BackgroundColor = ConsoleColor.Black;
         }
 

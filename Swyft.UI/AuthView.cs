@@ -33,7 +33,8 @@ namespace Swyft.UI
             else if (reply == "2")
             {
                 Register();
-            }else if (reply == "3")
+            }
+            else if (reply == "3")
             {
                 Environment.Exit(0);
             }

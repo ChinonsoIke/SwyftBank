@@ -31,10 +31,8 @@ namespace Swyft.UI
 
             //Thread.CurrentThread.CurrentCulture.NumberFormat.CurrencySymbol = "\u20A6"; // set currency symbol to naira (already works)
 
-            ForegroundColor = ConsoleColor.DarkBlue;
-
             // skip authentication and bank account creation stages
-            Faker.Initiate();
+            //Faker.Initiate();
 
             while (true)
             {

@@ -29,7 +29,7 @@ namespace Swyft.UI
             WriteLine("\t1. View Accounts\n\t2. Create new Savings or Current account\n\t3. Logout");
             Write("==> ");
 
-            string answer= ReadLine();
+            string answer = ReadLine();
 
             var user = Auth.CurrentUser;
 
@@ -40,7 +40,8 @@ namespace Swyft.UI
             else if (answer == "2")
             {
                 DisplayCreateAccountMenu(user);
-            }else if (answer == "3")
+            }
+            else if (answer == "3")
             {
                 Auth.Logout();
             }
@@ -115,13 +116,16 @@ namespace Swyft.UI
             else if (answer == "3")
             {
                 DisplayTransferMenu(account);
-            }else if (answer == "4")
+            }
+            else if (answer == "4")
             {
                 DisplayAccountStatement(account);
-            }else if (answer == "5")
+            }
+            else if (answer == "5")
             {
                 DisplayAccountBalance(account);
-            }else if (answer == "6")
+            }
+            else if (answer == "6")
             {
                 DisplayDashboard();
             }
@@ -193,7 +197,7 @@ namespace Swyft.UI
             Write("Enter amount: ");
             var answer = ReadLine();
 
-            if(!decimal.TryParse(answer, out decimal amount))
+            if (!decimal.TryParse(answer, out decimal amount))
             {
                 WriteLine("Invalid input");
                 ReadLine();
@@ -202,9 +206,9 @@ namespace Swyft.UI
 
             Write("Enter destination account: ");
             var answer2 = ReadLine();
-            var destinationAccount= Validate.CheckAccountExists(answer2, out string message);
+            var destinationAccount = Validate.CheckAccountExists(answer2, out string message);
 
-            if(destinationAccount == null)
+            if (destinationAccount == null)
             {
                 WriteLine(message);
                 Write("Press Enter to continue: ");
@@ -246,7 +250,7 @@ namespace Swyft.UI
 
             var transactions = _transactionService.GetAllAccountTransactions(account.Id);
 
-            if(transactions.Count > 0)
+            if (transactions.Count > 0)
             {
                 Print.PrintAccountStatement(account, transactions);
             }
